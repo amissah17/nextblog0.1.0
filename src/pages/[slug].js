@@ -56,7 +56,7 @@ export async function getStaticProps({ params }) {
 }
 
 function SinglePost({ post, source }) {
-  console.log(post);
+ 
 
 
   return (
