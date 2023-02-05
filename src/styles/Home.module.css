@@ -26,12 +26,11 @@
 
 .inside p {
   margin-bottom: 15px;
-  font-size:0.9rem ;
- 
+  font-size: 0.9rem;
 }
 
 .readButton {
-  padding: 10px 16px ;
+  padding: 10px 16px;
   background-color: aliceblue;
   font-weight: 500;
   cursor: pointer;
@@ -58,7 +57,7 @@
     padding: 10px 20px;
     box-shadow: 2px 3px 2px rgb(218, 218, 218);
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
   }
 
   .postcontainer h2 {
@@ -69,24 +68,23 @@
   }
   .inside p {
     margin-bottom: 10px;
-    font-size:0.9rem ;
-   
+    font-size: 0.9rem;
   }
-  
+
   .readButton {
-    padding: 10px 16px ;
+    padding: 10px 16px;
     background-color: aliceblue;
     font-weight: 500;
   }
 
   .img {
-  width: 250px;
-  height: 200px;
-  position: relative;
-}
-.container {
-  width: 65%;
-}
+    width: 250px;
+    height: 200px;
+    position: relative;
+  }
+  .container {
+    width: 65%;
+  }
 }
 
 /* Mobile */
@@ -94,7 +92,7 @@
   .postcontainer {
     max-width: 90%;
     margin-top: 50px;
-  margin-bottom: 50px;
+    margin-bottom: 50px;
     margin: auto;
   }
   .inside {
@@ -116,26 +114,22 @@
   }
   .inside p {
     margin-bottom: 10px;
-    font-size:0.9rem ;
-  
+    font-size: 0.9rem;
   }
-  
+
   .readButton {
-    padding: 10px 16px ;
+    padding: 10px 16px;
     background-color: aliceblue;
     font-weight: 500;
     cursor: pointer;
   }
 
- 
   .img {
- 
     width: 100%;
     height: 200px;
     position: relative;
   }
   .container {
-  
     width: 100%;
   }
 }
