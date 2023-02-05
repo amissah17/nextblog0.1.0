@@ -1,4 +1,4 @@
-// import { useRouter } from "next/router";
+
 import { GraphQLClient, gql } from "graphql-request";
 import Head from "next/head";
 import Style from "../styles/SinglePost.module.css";
@@ -44,7 +44,7 @@ export async function getStaticPaths() {
         slug,
       },
     })),
-    fallback: true,
+    fallback: "blocking",
   };
 }
 
@@ -57,7 +57,7 @@ export async function getStaticProps({ params }) {
 
 function SinglePost({ post, source }) {
   console.log(post);
-  // const router = useRouter();
+
 
   return (
     <>
