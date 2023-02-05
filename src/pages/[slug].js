@@ -69,13 +69,15 @@ function SinglePost({ post, source }) {
           <h1>{post.title}</h1>
           <h3>Author: {post.author.authorName}</h3>
         </div>
-        <Image
+        <div className={Style.img}>
+           <Image
           src={post.coverPhoto.url}
           alt={post.coverPhoto.alt}
-          width={700}
-          height={480}
-          className={Style.img}
+         fill
+          
         />
+        </div>
+       
         <div className={Style.mdxs}>
           <MDXRemote {...source} />
         </div>

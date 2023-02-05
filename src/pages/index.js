@@ -18,6 +18,7 @@ const query = gql`
         url
       }
       excerpt
+      id
       author {
         authorName
       }
@@ -28,42 +29,44 @@ const query = gql`
 export async function getServerSideProps() {
   const { blogposts } = await graphConnect.request(query);
 
-  return { props:  {blogposts} };
+  return { props: { blogposts } };
 }
 
-function Homepage({blogposts}) {
-  
-
+function Homepage({ blogposts }) {
   return (
     <>
       <Head>
         <title>Blog Tutorial</title>
       </Head>
-      {blogposts.map((blogposts) => {
-        return (
-          <div className={Style.postcontainer}>
-            <div className={Style.inside}>
-              <div >
-                <Image
-                  src={blogposts.coverPhoto.url}
-                  alt="featured text"
-                width={260}
-                height = {200}
-                sizes="(max-width:700)  100vw"
-                />
-              </div>
-              <div>
-                <Link href={blogposts.slug}><h2>{blogposts.title}</h2></Link>
-                <p>{blogposts.excerpt}</p>
-                <p>By {blogposts.author.authorName}</p>
-                <Link href={blogposts.slug}><button className={Style.readButton}>Read More</button> </Link>
-                
+      <div className={Style.postcontainer}>
+        {blogposts.map((blogposts) => {
+          return (
+            <div  key={blogposts.id}>
+              <div className={Style.inside}>
+                <div className={Style.img}>
+                  <Image
+                    src={blogposts.coverPhoto.url}
+                    alt="featured text"
+                    fill
+                  />
+                </div>
+                <div className={Style.container}>
+                  <Link href={blogposts.slug}>
+                    <h2>{blogposts.title}</h2>
+                  </Link>
+                  <p>{blogposts.excerpt}</p>
+                  <p>By {blogposts.author.authorName}</p>
+                  <Link href={blogposts.slug}>
+                    <button className={Style.readButton}>Read More</button>{" "}
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-        );
-      })}
-      ;
+          );
+        })}
+        ;
+      </div>
+
       {/* <div className={Style.postcontainer}>
         <div className={Style.inside}>
           <div>

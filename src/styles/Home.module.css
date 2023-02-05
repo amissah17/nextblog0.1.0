@@ -18,6 +18,7 @@
 }
 
 .inside h2 {
+  text-align: justify;
   margin-bottom: 15px;
   font-size: 1.5rem;
   font-weight: 600;
@@ -35,20 +36,21 @@
   font-weight: 500;
   cursor: pointer;
 }
-.cnter {
-  margin: auto;
-  text-align: center;
-  padding: 50px 80px;
-}
+
 .img {
-  width:260px;
+  width: 260px;
   height: 200px;
   position: relative;
+}
+.container {
+  width: 555px;
 }
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
   .postcontainer {
-    max-width: 900px;
+    max-width: 80%;
+    margin-top: 50px;
+    margin-bottom: 50px;
     margin: auto;
   }
   .inside {
@@ -60,6 +62,7 @@
   }
 
   .postcontainer h2 {
+    text-align: justify;
     margin-bottom: 10px;
     font-size: 1.9rem;
     font-weight: 600;
@@ -75,17 +78,23 @@
     background-color: aliceblue;
     font-weight: 500;
   }
-  .cnter {
-    margin: auto;
-    text-align: center;
-    padding: 50px 80px;
-  }
+
+  .img {
+  width: 250px;
+  height: 200px;
+  position: relative;
+}
+.container {
+  width: 65%;
+}
 }
 
 /* Mobile */
 @media (max-width: 700px) {
   .postcontainer {
     max-width: 90%;
+    margin-top: 50px;
+  margin-bottom: 50px;
     margin: auto;
   }
   .inside {
@@ -95,16 +104,20 @@
     display: flex;
     flex-direction: column;
   }
+  .inside div:last-child {
+    margin-left: 0;
+  }
 
   .postcontainer h2 {
+    text-align: justify;
     margin-bottom: 10px;
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     font-weight: 600;
   }
   .inside p {
     margin-bottom: 10px;
     font-size:0.9rem ;
-   
+  
   }
   
   .readButton {
@@ -114,9 +127,15 @@
     cursor: pointer;
   }
 
-  .cnter {
-    margin: auto;
-    text-align: center;
-    padding: 50px 80px;
+ 
+  .img {
+ 
+    width: 100%;
+    height: 200px;
+    position: relative;
+  }
+  .container {
+  
+    width: 100%;
   }
 }
