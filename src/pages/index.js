@@ -43,12 +43,13 @@ function Homepage({blogposts}) {
         return (
           <div className={Style.postcontainer}>
             <div className={Style.inside}>
-              <div>
+              <div >
                 <Image
                   src={blogposts.coverPhoto.url}
                   alt="featured text"
-                  width={260}
-                  height={200}
+                width={260}
+                height = {200}
+                sizes="(max-width:700)  100vw"
                 />
               </div>
               <div>

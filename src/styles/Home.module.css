@@ -40,7 +40,11 @@
   text-align: center;
   padding: 50px 80px;
 }
-
+.img {
+  width:260px;
+  height: 200px;
+  position: relative;
+}
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
   .postcontainer {
@@ -81,7 +85,7 @@
 /* Mobile */
 @media (max-width: 700px) {
   .postcontainer {
-    max-width: 900px;
+    max-width: 90%;
     margin: auto;
   }
   .inside {
