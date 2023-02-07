@@ -1,8 +1,8 @@
 .postcontainer {
   max-width: 800px;
   margin: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   padding: 0 5px;
 }
 .inside {
@@ -49,12 +49,12 @@
   .postcontainer {
     max-width: 80%;
     margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     
   }
   .inside {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     padding: 10px 20px;
     box-shadow: 2px 3px 2px rgb(218, 218, 218);
     display: flex;
@@ -93,12 +93,12 @@
   .postcontainer {
     max-width: 90%;
     margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     
   }
   .inside {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     padding: 10px 20px;
     box-shadow: 2px 3px 2px rgb(218, 218, 218);
     display: flex;
