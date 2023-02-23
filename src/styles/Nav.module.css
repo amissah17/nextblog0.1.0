@@ -5,7 +5,6 @@
   background-color: rgb(0, 0, 0);
   color: whitesmoke;
   position: relative;
-  z-index: 1000;
 }
 .mobiNav {
   display: none;
@@ -50,56 +49,54 @@
     position:fixed;
     top:0;
     width: 100%;
+    z-index: 1000;
   }
   .navBar h1{
     font-size: 1.5rem;
   }
   .navBar li {
+
     font-size: 1rem
   }
   .mobiNav {
     display: flex;
     flex-direction: column;
-    row-gap: 5px;
+    row-gap: 4px;
     padding: 6px;
   }
   .mobiNav div {
-    width: 25px;
-    height: 3px;
+    width: 23px;
+    height: 1.5px;
+    border-radius: 1px;
     background-color: rgb(255, 255, 255);
   }
-  .navItems {
-    position: absolute;
+ .navItems{
+  position: absolute;
     right: 0;
-    top: 71px;
-    width: 0;
-    height: 100vh;
-    width: 100vw;
-    transition: 0.5s;
-    overflow: hidden;
-  }
+    top: 67px;
+ }
   .navItems ul {
+    position: absolute;
+    top: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     justify-content: unset;
     row-gap: 13px;
     list-style: none;
-    position: absolute;
-    right: 0;
-    height: inherit;
     width: 0;
+    height: 100vh;
     overflow: hidden;
+        background-color: rgb(0, 0, 0);
     transition: 0.5s;
-    background-color: rgb(0, 0, 0);
   }
 
-  .navItems.active {
-    background-color: rgba(0, 0, 0, 0.76);
-  }
 
   .navItems.active ul {
-    width: 80vw;
+    width: 100vw;
+
   }
+ 
   .navItem li::before {
     display: none;
   }

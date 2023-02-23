@@ -1,13 +1,14 @@
-// import Link from "next/link";
-
+import { useState } from "react";
 import styles from "../styles/Layout.module.css";
 
 import Nav from "./Nav";
 
 function Layout({ children }) {
+  const [navActive, setNavActive] = useState(false);
+
   return (
     <>
-      <Nav />
+      <Nav navActive={navActive} setNavActive={setNavActive} />
       <main className={styles.main_style}>{children}</main>
     </>
   );

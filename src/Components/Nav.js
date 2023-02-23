@@ -1,7 +1,7 @@
 import Style from "../styles/Nav.module.css";
-import { useState } from "react";
+// import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
+
 
 
 const menu_itemList = [
@@ -9,8 +9,8 @@ const menu_itemList = [
   { name: "About", href: "/about" },
 ];
 
-function Nav({children}) {
-  const [navActive, setNavActive] = useState(false);
+function Nav({navActive,setNavActive}) {
+  // const [navActive, setNavActive] = useState(false);
 
   return (
     <div className={Style.navBar}>
@@ -48,7 +48,6 @@ function Nav({children}) {
           })}
         </ul>
       </div>
-      {children}
     </div>
     
   );
