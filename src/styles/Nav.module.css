@@ -24,7 +24,7 @@
   position: relative;
   color: rgba(235, 235, 235, 0.841);
   position: relative;
-  z-index: inherit;
+  /* z-index: inherit; */
 }
 .navItem li::before {
   content: "";
@@ -46,6 +46,17 @@
 
 
 @media screen and (max-width: 700px) {
+  .navBar {
+    position:fixed;
+    top:0;
+    width: 100%;
+  }
+  .navBar h1{
+    font-size: 1.5rem;
+  }
+  .navBar li {
+    font-size: 1rem
+  }
   .mobiNav {
     display: flex;
     flex-direction: column;
@@ -53,14 +64,14 @@
     padding: 6px;
   }
   .mobiNav div {
-    width: 40px;
-    height: 5px;
+    width: 25px;
+    height: 3px;
     background-color: rgb(255, 255, 255);
   }
   .navItems {
     position: absolute;
     right: 0;
-    top: 76px;
+    top: 71px;
     width: 0;
     height: 100vh;
     width: 100vw;

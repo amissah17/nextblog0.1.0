@@ -8,7 +8,7 @@ function Layout({ children }) {
   return (
     <>
       <Nav />
-      <main>{children}</main>
+      <main className={styles.main_style}>{children}</main>
     </>
   );
 }

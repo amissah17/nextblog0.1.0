@@ -68,7 +68,6 @@ function Homepage({ blogposts }) {
             </div>
           );
         })}
-        ;
       </main>
 
    
