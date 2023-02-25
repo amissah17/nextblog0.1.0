@@ -1,4 +1,3 @@
-
 import { GraphQLClient, gql } from "graphql-request";
 import Head from "next/head";
 import Style from "../styles/SinglePost.module.css";
@@ -9,6 +8,8 @@ import { MDXRemote } from "next-mdx-remote";
 const url =
   "https://api-us-east-1-shared-usea1-02.hygraph.com/v2/cld3i52fm0lpi01up5mpk5v3i/master";
 
+
+  //instantiating a graphqlclient...
 const graphConnect = new GraphQLClient(url);
 
 const query = gql`
@@ -30,6 +31,8 @@ const query = gql`
 `;
 
 export async function getStaticPaths() {
+
+  // querying for slugs from hygraph...
   const { blogposts } = await graphConnect.request(gql`
     query {
       blogposts {
@@ -49,39 +52,37 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+  // making request to hygraph for each post matching a slug
   const { blogpost } = await graphConnect.request(query, { slug: params.slug });
   const content = blogpost.content.markdown;
+
+  //serializing my markdown response from the rich text field
   const MdxSource = await serialize(content);
+
+  //passing the post together with the serialized post.
   return { props: { post: blogpost, source: MdxSource } };
 }
 
 function SinglePost({ post, source }) {
- 
-
-
   return (
     <>
       <Head>
         <title>Blog</title>
       </Head>
-      <div className={Style.main}>
+
+      <main className={Style.main}>
         <div className={Style.header}>
           <h1>{post.title}</h1>
           <h3>Author: {post.author.authorName}</h3>
         </div>
         <div className={Style.img}>
-           <Image
-          src={post.coverPhoto.url}
-          alt={post.coverPhoto.alt}
-         fill
-          
-        />
+          <Image src={post.coverPhoto.url} alt={post.coverPhoto.alt} fill />
         </div>
-       
+
         <div className={Style.mdxs}>
           <MDXRemote {...source} />
         </div>
-      </div>
+      </main>
     </>
   );
 }

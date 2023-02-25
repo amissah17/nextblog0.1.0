@@ -1,20 +1,16 @@
-import Link from "next/link";
+// import Link from "next/link";
+
 import styles from "../styles/Layout.module.css";
 
+import Nav from "./Nav";
 
 function Layout({ children }) {
   return (
     <>
-      <nav className={styles.nav}>
-        <div>
-          <Link href="/"><h1>NextBlog 0.1</h1></Link>
-        </div>
-      </nav>
-      {children}
+      <Nav />
+      <main>{children}</main>
     </>
   );
 }
-
-
 
 export default Layout;
