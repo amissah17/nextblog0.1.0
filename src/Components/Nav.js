@@ -9,14 +9,13 @@ const menu_itemList = [
 ];
 
 function Nav({navActive,setNavActive}) {
-  // const [navActive, setNavActive] = useState(false);
+ 
 
   return (
     <div className={Style.navBar}>
       
       <Link href={"/"} onClick={()=>{
           setNavActive(false)
-  
            }}><h1>NextBlog</h1></Link>
       <div
         className={Style.mobiNav}
@@ -32,13 +31,12 @@ function Nav({navActive,setNavActive}) {
       {/*  */}
       <div className={`${Style.navItems} ${navActive ? Style.active : ""}`}>
         <ul className={Style.navItem}>
-          {menu_itemList.map((menu, idx) => {
+          {menu_itemList.map((menu) => {
             return (
               <div
                 key={menu.name}
                 onClick={() => {
-                  setNavActive(false);
-                  
+                  setNavActive(false); 
                 }}
               >
                 <Nav_menu  {...menu} />
