@@ -36,7 +36,7 @@ This is a one column basic blog built with Hygraph cms.
 
 1. Get API endpoint from [Hygraph](https://hygraph.com/)
 
-5. Enter endpoint `.env.local`
+5. Enter endpoint in `.env.local` file
 
         ENDPOINT='enter your hygraph content endpoint'
 
