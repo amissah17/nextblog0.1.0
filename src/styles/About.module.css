@@ -1,0 +1,21 @@
+.bout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   height: 100vh;
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 1.3rem;
+    
+}
+
+@media (min-width: 701px) and (max-width: 1120px) {
+   .bout{
+    font-size: 1.3rem;
+   } 
+}
+@media (max-width: 700px){
+   .bout{
+    font-size: 1.05rem;
+   } 
+}

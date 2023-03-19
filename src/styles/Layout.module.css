@@ -1,0 +1,10 @@
+
+@media screen and (max-width:700px){
+  .main_style{
+    width: 100%;
+     position: absolute;
+     top: 67px;
+    
+  }
+ 
+}
