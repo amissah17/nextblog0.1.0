@@ -4,7 +4,7 @@ This is a one column basic blog built with Hygraph cms.
 
 ## Demo
 
-[Here's a live preview of the app](https://nextblog-smoky.vercel.app/)
+[Here's a live preview of the app](https://nextblogs.vercel.app/)
 
 ## Technologies
 
