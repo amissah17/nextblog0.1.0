@@ -54,6 +54,6 @@ Distributed under the [MIT License](LICENSE)
 
 ## Contact
 
-Frank Amissah -[Twitter](https://twitter.com/amotabit8)
+Frank Amissah -[Twitter](https://twitter.com/amotabil8)
 
 Project Link: [GitHub](https://github.com/amissah17/nextblog)
